@@ -59,6 +59,13 @@ in-browser web camera streaming only functions in web ports (apparently security
 
 ### API Workflow
 
+Generally, it works as fellows:
+Step 1. Upload raw video, returns a runid.
+Step 2. Process this runid
+Step 2a. (Optional) Annotate the processes image with angles
+Step 3. View the video streams.
+Step 3. Generate Report.
+
 *Index Page:* Hosts a simple video capture framework, which includes a graphical interface to the API.
 
 ```
@@ -115,11 +122,11 @@ both identified pose and annotated angle.
 ### Futher API Tools
 
 ```
-<host>/airom/getframe?runid=<runid>&framenum=<frame-index>
+<host>/airom/getframe?runid=<runid>&frame=<frame-index>
 ```
 
 ```
-<host>/airom/getname?runid=<runid>&framenum=<frame-index>
+<host>/airom/getname?runid=<runid>&frame=<frame-index>
 ```
 
 
